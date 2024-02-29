@@ -1,4 +1,3 @@
-
 global.owner = ['6285794908894']  
 global.mods = ['6285794908894'] 
 global.prems = ['6285794908894']
