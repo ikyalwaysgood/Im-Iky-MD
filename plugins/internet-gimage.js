@@ -1,24 +1,15 @@
-let { promisify } = require('util')
-let _gis = require('g-i-s')
-let gis = promisify(_gis)
+const { googleImage } = require('@bochilteam/scraper')
 
-let handler  = async (m, { conn, args, text }) => {
-  if (!text) return m.reply('Cari apa?')
-  let results = await gis(text) || []
-  let { url, width, height } = pickRandom(results) || {}
-  if (!url) return m.reply('Not Found')
-  var capt = `
-*── 「 GOOGLE IMAGE 」 ──*
-
-${text}
-➸ *width*: ${width}
-➸ *height*: ${height}
-`
-conn.sendFile(m.chat, url, 'gimage.jpg', capt, m)
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (!text) throw `Use example ${usedPrefix}${command} Minecraft`
+    const res = await googleImage(text)
+    let image = pickRandom(res)
+    let link = image
+    conn.sendFile(m.chat, link, 'google.jpg', `*G O O G L E*\n*Result:* ${text}\n*Source:* https://google.com`, m)
 }
-handler.help = ['image <query>', 'gimage <query>', 'googleimage <query>']
+handler.help = ['gimage <query>', 'image <query>', 'foto <query>']
 handler.tags = ['internet']
-handler.command = /^(gimage|googleimage|image)$/i
+handler.command = /^(gimage|image|foto)$/i
 
 module.exports = handler
 
