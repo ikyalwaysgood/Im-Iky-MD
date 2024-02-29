@@ -4,19 +4,22 @@ let handler = async (m, { conn }) => {
     let uptimex = clockString(_uptime)
 
     let tio = `
-Mode: ${global.opts['self'] ? 'Self' : 'publik'}\nAktif: ${uptimex}\nPengguna: ${Object.keys(global.db.data.users).length}\nPengguna Terbanned: ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}\nFitur Sering Digunakan: ${Object.entries(db.data.stats).length}\n\nJika bot tidak ada balasan maka bot sedang maintenance.
+Mode: ${global.opts['self'] ? 'Self' : 'publik'}\nAktif: ${uptimex}\nPengguna: ${Object.keys(global.db.data.users).length}\nPengguna Terbanned: ${Object.entries(global.db.data.users).filter(user => user[1].banned).length}\nFitur Sering Digunakan: ${Object.entries(db.data.stats).length}\n\nJika Kιɳα Bσƚ tidak ada balasan maka Kιɳα Bσƚ sedang maintenance.
     `.trim()
-conn.sendMessage(m.chat, {
-text: tio,
-contextInfo: {
-externalAdReply: {
-title: "",
-body: uptimex,
-thumbnailUrl: "https://telegra.ph/file/dc5a67d724b016574129b.jpg",
-sourceUrl: "",
-mediaType: 1,
-renderLargerThumbnail: true
-}}})
+conn.relayMessage(m.chat, {
+extendedTextMessage:{
+                text: tio, 
+                contextInfo: {
+                     externalAdReply: {
+                        title: uptimex,
+                        mediaType: 1,
+                        previewType: 0,
+                        renderLargerThumbnail: true,
+                        thumbnailUrl: 'https://telegra.ph/file/da3dd014f4481e4bbd089.jpg',
+                        sourceUrl: 'https://chat.whatsapp.com/GbNiwLK3R9y4pOUFDW5eAQ'
+                    }
+                }, mentions: [m.sender]
+}}, {})
 }
 handler.help = ['mode']
 handler.tags = ['main']
