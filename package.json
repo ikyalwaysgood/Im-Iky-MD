@@ -27,16 +27,16 @@
         "ikyofficial",
         "baileys"
     ],
-    "homepage": "https://github.com/ikyalwaysgood/Iky-MD",
+    "homepage": "https://github.com/ikyalwaysgood/Im-Iky-MD",
     "author": {
         "name": "Kιɳα Bσƚ"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ikyalwaysgood/Iky-MD"
+        "url": "git+https://github.com/ikyalwaysgood/Im-Iky-MD"
     },
     "bugs": {
-        "url": "https://github.com/ikyalwaysgood/Iky-MD"
+        "url": "https://github.com/ikyalwaysgood/Im-Iky-MD"
     },
     "license": "MIT",
     "dependencies": {
