@@ -1,12 +1,19 @@
 {
-  "name": "Im-Iky-MD",
+  "name": "ikyofficial",
   "description": "Lightweight WhatsApp Bot",
   "repository": "https://github.com/ikyalwaysgood/Im-Iky-MD",
-  "logo": "https://telegra.ph/file/41faaeb380ee6529c179f.jpg",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": [
-    "bot",
-    "whatsapp",
-    "multi-device",
-    "whatsapp-bot"
+        "whatsapp-bot-md",
+        "whatsapp-bot",
+        "whatsapp",
+        "js-whatsapp",
+        "whatsapp",
+        "Games-wabot",
+        "wabot-aq",
+        "whiskeysockets",
+        "botcahx",
+        "ikyofficial",
+        "baileys"
   ]
 }
