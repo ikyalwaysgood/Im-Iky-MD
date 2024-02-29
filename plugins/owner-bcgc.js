@@ -8,16 +8,19 @@ let handler = async (m, { conn, isROwner, text }) => {
     m.reply(`Mengirim Broadcast Ke ${anu.length} Chat, Waktu Selesai ${anu.length * 0.5 } detik`)
     for (let i of anu) {
     await delay(500)
-    conn.relayMessage(i, 
-{ liveLocationMessage: {
-  degreesLatitude: 35.685506276233525,
-  degreesLongitude: 139.75270667105852,
-  accuracyInMeters: 0,
-degreesClockwiseFromMagneticNorth: 2,
-caption: pesan + ' \n\n「Broadcast Group」' ,
-sequenceNumber: 2,
-timeOffset: 3,
-contextInfo: m,
+    conn.relayMessage(i, {
+extendedTextMessage:{
+                text: pesan, 
+                contextInfo: {
+                     externalAdReply: {
+                        title: wm,
+                        mediaType: 1,
+                        previewType: 0,
+                        renderLargerThumbnail: true,
+                        thumbnailUrl: 'https://telegra.ph/file/da3dd014f4481e4bbd089.jpg',
+                        sourceUrl: 'https://whatsapp.com/channel/0029VaACVbGDuMRk7zy6vI3a'
+                    }
+                }, mentions: [m.sender]
 }}, {}).catch(_ => _)
     }
   m.reply(`Sukses Mengirim Broadcast Ke ${anu.length} Group`)
