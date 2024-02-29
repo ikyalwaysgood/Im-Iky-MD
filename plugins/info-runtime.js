@@ -15,8 +15,8 @@ contextInfo: {
 externalAdReply: {
 title: "",
 body: time,
-thumbnailUrl: "https://telegra.ph/file/dc5a67d724b016574129b.jpg",
-sourceUrl: "",
+thumbnailUrl: "https://telegra.ph/file/ec1342450424ae0bf13ba.jpg",
+sourceUrl: "https://www.instagram.com/iky_alwaysgood?igsh=MXdwbXR3a2xxNjRocA==",
 mediaType: 1,
 renderLargerThumbnail: true
 }}})
