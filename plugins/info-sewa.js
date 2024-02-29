@@ -1,21 +1,11 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  
-var caption = `Hi, Silahkan pilih opsi di bawah ini.\n*Payment*\n\n*x* Dana: 082221792667\n*x* Pulsa: 082221792667`
-conn.relayMessage(m.chat, 
-{ liveLocationMessage: {
-  degreesLatitude: 35.685506276233525,
-  degreesLongitude: 139.75270667105852,
-  accuracyInMeters: 0,
-degreesClockwiseFromMagneticNorth: 2,
-caption: caption,
-sequenceNumber: 2,
-timeOffset: 3,
-contextInfo: m,
-}}, {})
+let fetch = require('node-fetch')
+
+let handler = async (m, { conn, command }) => {
+    let buffer = await fetch(`https://telegra.ph/file/ec1342450424ae0bf13ba.jpg`).then(res => res.buffer())
+    conn.sendFile(m.chat, buffer, 'hasil.jpg', `*Hi👋🏻 daftar harga sewa di bawah ini!*\n
+╔═══════════════════\n║ _*PEMBAYARAN DI SINI*_\n╠═══════════════════\n║╭──❉ 〔 *INFO* 〕 ❉──────\n║│➸ *DANA* : 085794908894\n║│➸ *PULSA*: 083164864536\n║│➸ *GOPAY*: 085794908894\n║╰──────────────────\n╰═══════════════════`, m)
 }
 
-handler.help = ['sewa']
+handler.help = handler.command = ['sewa','sewabot','belibot']
 handler.tags = ['main']
-handler.command = /^(sewa|sewabot|belibot)$/i
-
 module.exports = handler
