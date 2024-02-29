@@ -1,7 +1,7 @@
 global.owner = ['6285794908894']  
 global.mods = ['6285794908894'] 
 global.prems = ['6285794908894']
-global.nameowner = 'ɪɴᴏʀʏ ᴀɴᴅ ᴡᴀʜᴀʙ'
+global.nameowner = 'Iky𝖔𝖋𝖋𝖎𝖈𝖎𝖆𝖑ཽ'
 global.numberowner = '6285794908894' 
 global.mail = '-' 
 global.dana = '6285794908894'
