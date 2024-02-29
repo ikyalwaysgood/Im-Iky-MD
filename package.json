@@ -1,5 +1,5 @@
 {
-    "name": "rtxzy",
+    "name": "KinaBot",
     "version": "5.0.7",
     "description": "Customizable WhatsApp Bot",
     "depecrated": false,
@@ -24,18 +24,19 @@
         "wabot-aq",
         "multi-device",
         "BOTCAHX",
+        "Iky Official",
         "baileys"
     ],
-    "homepage": "https://github.com/BOTCAHX/RTXZY-MD",
+    "homepage": "https://github.com/ikyalwaysgood/Im-Iky-MD",
     "author": {
-        "name": "BOTCAHX"
+        "name": "Iky Official"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BOTCAHX/RTXZY-MD.git"
+        "url": "git+https://github.com/ikyalwaysgood/Im-Iky-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/BOTCAHX/RTXZY-MD/issues"
+        "url": "https://github.com/ikyalwaysgood/Im-Iky-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
